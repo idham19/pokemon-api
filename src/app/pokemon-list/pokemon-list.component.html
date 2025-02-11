@@ -1,0 +1,8 @@
+<div class="pokemon-list" *ngFor="let pokemon of pokemonList" >
+  <article >
+    <li >
+      <strong>{{ pokemon.name }}</strong>
+       </li>
+       <a [href]="pokemon.url"></a> 
+  </article>
+</div>
