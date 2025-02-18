@@ -11,7 +11,7 @@ interface PokemonResponse {
   results: Pokemon[];
 }
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root'  
 })
 export class ApiService {
   private apiUrl = ' https://pokeapi.co/api/v2/pokemon?limit=151'; 
@@ -21,4 +21,6 @@ export class ApiService {
   getPokemonList(): Observable<PokemonResponse> {
     return this.http.get<PokemonResponse>(this.apiUrl);
   }
+
+  
 }

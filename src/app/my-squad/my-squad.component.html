@@ -1,0 +1,15 @@
+<h2>My squad ({{ (squad$ | async)?.length }})</h2>
+<div class="flex items-center justify-center text-center flex-wrap justify-around gap-8 mt-12 w-full h-full ">
+  
+  <div class="flex items-center justify-center text-center flex-wrap justify-around gap-8 mt-12 w-full h-full">
+  <div *ngFor="let pokemon of squad$ | async" class="pokemon-card">
+    <article class="border border-solid rounded-lg shadow-[1rem_1rem_1rem_rgba(8,0,0,0.2)] text-center p-8 relative transition-all duration-400 cursor-pointer flex-basis-[200px] bg-white">
+
+      <h3>{{ pokemon.name | titlecase }}</h3>
+      
+      <button class="remove-btn" (click)="removeFromSquad(pokemon)">Remove</button>
+    </article>
+  </div>
+</div>
+
+</div>

@@ -1,7 +1,7 @@
 
 
-  <div class="flex items-center justify-center text-center flex-wrap justify-around gap-8 mt-12 w-full h-full ">
-    <article class="border border-solid rounded-lg shadow-[1rem_1rem_1rem_rgba(8,0,0,0.2)] text-center p-8 relative transition-all duration-400 cursor-pointer flex-basis-[200px] bg-white"  *ngFor="let pokemon of pokemonList" >
+  <div class="flex items-center justify-center text-center flex-wrap justify-around gap-8 mt-12 w-full h-full border border-solid  ">
+    <article class="border border-solid rounded-lg shadow-[1rem_1rem_1rem_rgba(8,0,0,0.2)] text-center p-8 relative transition-all duration-400 cursor-pointer flex-basis-[200px] bg-green"  *ngFor="let pokemon of pokemonList" >
       <app-pokemon-details [pokemon]="pokemon"></app-pokemon-details>
     </article>
   </div>
