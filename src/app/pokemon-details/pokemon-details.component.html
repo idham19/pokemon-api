@@ -2,7 +2,7 @@
 <div  class="pokemon-details"  >
     
     <div class="event-info">
-        <img src="" alt="pokemon-image">
+        <img class="w-12 h-12 rounded-full"src="https://i.pinimg.com/550x/cb/33/49/cb3349b86ca661ca61ae9a36d88d70d4.jpg" alt="pokemon-image">
         <div >
             <h1 >{{pokemon.name}}</h1>
         </div>
@@ -10,7 +10,7 @@
         <div class="description">
             <a href={{pokemon.url}}></a>
         </div>
-        <button class="add-btn" (click)="addToSquad(pokemon)">Add</button>
+        <button class="bg-green-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded cursor-pointer" (click)="addToSquad(pokemon)">Add</button>
 
         
     </div>

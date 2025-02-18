@@ -1,13 +1,22 @@
-<h2>My squad ({{ (squad$ | async)?.length }})</h2>
+
+<h1 class="text-center font-bold text-2xl">My squad ({{ (squad$ | async)?.length }})</h1>
+
+<button 
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded cursor-pointer text-lg transform scale-110 transition-transform text-center"
+    *ngIf="(squad$ | async)?.length >= 3"
+  >
+    BATTLE
+  </button>
+
 <div class="flex items-center justify-center text-center flex-wrap justify-around gap-8 mt-12 w-full h-full ">
   
   <div class="flex items-center justify-center text-center flex-wrap justify-around gap-8 mt-12 w-full h-full">
   <div *ngFor="let pokemon of squad$ | async" class="pokemon-card">
-    <article class="border border-solid rounded-lg shadow-[1rem_1rem_1rem_rgba(8,0,0,0.2)] text-center p-8 relative transition-all duration-400 cursor-pointer flex-basis-[200px] bg-white">
-
+    <article class="border border-solid rounded-lg shadow-[1rem_1rem_1rem_rgba(8,0,0,0.2)] text-center p-8 relative transition-all duration-400 cursor-pointer flex-basis-[200px] bg-[#f0f0f0]">
+      <img class="w-12 h-12 rounded-full"src="https://i.pinimg.com/550x/cb/33/49/cb3349b86ca661ca61ae9a36d88d70d4.jpg" alt="pokemon-image">
       <h3>{{ pokemon.name | titlecase }}</h3>
       
-      <button class="remove-btn" (click)="removeFromSquad(pokemon)">Remove</button>
+      <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded cursor-pointer" (click)="removeFromSquad(pokemon)">Remove</button>
     </article>
   </div>
 </div>
