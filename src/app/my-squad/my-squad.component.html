@@ -1,5 +1,6 @@
 
 <h1 class="text-center font-bold text-2xl">My squad ({{ (squad$ | async)?.length }})</h1>
+<h1 class="text-center font-bold text-3xl" *ngIf="( (squad$ | async)?.length==6)">The Squad is Full</h1>
 
 <button 
     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded cursor-pointer text-lg transform scale-110 transition-transform text-center"
